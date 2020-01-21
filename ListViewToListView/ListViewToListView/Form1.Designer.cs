@@ -188,6 +188,7 @@
             this.btnListeEinlesen.TabIndex = 3;
             this.btnListeEinlesen.Text = "Liste einlesen";
             this.btnListeEinlesen.UseVisualStyleBackColor = true;
+            this.btnListeEinlesen.Click += new System.EventHandler(this.btnListeEinlesen_Click);
             // 
             // btnInListeSpeichern
             // 
@@ -197,6 +198,7 @@
             this.btnInListeSpeichern.TabIndex = 3;
             this.btnInListeSpeichern.Text = "in Liste speichern";
             this.btnInListeSpeichern.UseVisualStyleBackColor = true;
+            this.btnInListeSpeichern.Click += new System.EventHandler(this.btnInListeSpeichern_Click);
             // 
             // btnLV1Clear
             // 
@@ -206,6 +208,7 @@
             this.btnLV1Clear.TabIndex = 4;
             this.btnLV1Clear.Text = "CLR";
             this.btnLV1Clear.UseVisualStyleBackColor = true;
+            this.btnLV1Clear.Click += new System.EventHandler(this.btnLV1Clear_Click);
             // 
             // btnLV2Clear
             // 
@@ -253,6 +256,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "Form1";
             this.Text = "From ListView To ListView";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
