@@ -67,6 +67,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -113,6 +114,7 @@
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.DoubleClick += new System.EventHandler(this.listView2_DoubleClick);
             // 
             // columnHeader6
             // 
@@ -152,6 +154,7 @@
             this.btnEinsRechts.TabIndex = 2;
             this.btnEinsRechts.Text = ">";
             this.btnEinsRechts.UseVisualStyleBackColor = true;
+            this.btnEinsRechts.Click += new System.EventHandler(this.btnEinsRechts_Click);
             // 
             // btnEinsLinks
             // 
@@ -161,6 +164,7 @@
             this.btnEinsLinks.TabIndex = 2;
             this.btnEinsLinks.Text = "<";
             this.btnEinsLinks.UseVisualStyleBackColor = true;
+            this.btnEinsLinks.Click += new System.EventHandler(this.btnEinsLinks_Click);
             // 
             // btnAlleRechts
             // 
@@ -170,6 +174,7 @@
             this.btnAlleRechts.TabIndex = 2;
             this.btnAlleRechts.Text = ">>";
             this.btnAlleRechts.UseVisualStyleBackColor = true;
+            this.btnAlleRechts.Click += new System.EventHandler(this.btnAlleRechts_Click);
             // 
             // btnAlleLinks
             // 
@@ -179,6 +184,7 @@
             this.btnAlleLinks.TabIndex = 2;
             this.btnAlleLinks.Text = "<<";
             this.btnAlleLinks.UseVisualStyleBackColor = true;
+            this.btnAlleLinks.Click += new System.EventHandler(this.btnAlleLinks_Click);
             // 
             // btnListeEinlesen
             // 

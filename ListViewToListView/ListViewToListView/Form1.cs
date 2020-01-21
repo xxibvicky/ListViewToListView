@@ -25,6 +25,9 @@ namespace ListViewToListView
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            listView1.FullRowSelect = true;
+            listView2.FullRowSelect = true;
+
             autos = new List<Auto>();
 
             //autos.Add(new Auto("MI 19ET", "Peugeot", "514", "grau", 140));
@@ -105,6 +108,78 @@ namespace ListViewToListView
         private void btnListeEinlesen_Click(object sender, EventArgs e)
         {
             einlesenAutos();
+        }
+
+        internal void einsRechts()
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Kein Item ausgewählt!");
+            }
+            else
+            {
+                lvItem = listView1.SelectedItems[0];
+                int inde = lvItem.Index;
+                listView1.Items.RemoveAt(inde);
+                listView2.Items.Add(lvItem);
+            }
+        }
+
+        private void btnEinsRechts_Click(object sender, EventArgs e)
+        {
+            einsRechts();
+        }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            einsRechts();
+        }
+
+        internal void einsLinks()
+        {
+            if (listView2.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Kein Item ausgewählt!");
+            }
+            else
+            {
+                lvItem = listView2.SelectedItems[0];
+                int inde = lvItem.Index;
+                listView2.Items.RemoveAt(inde);
+                listView1.Items.Add(lvItem);
+            }
+        }
+
+        private void btnEinsLinks_Click(object sender, EventArgs e)
+        {
+            einsLinks();
+        }
+
+        private void listView2_DoubleClick(object sender, EventArgs e)
+        {
+            einsLinks();
+        }
+
+        private void btnAlleRechts_Click(object sender, EventArgs e)
+        {
+            int anzahl = listView1.Items.Count;
+            for(int i = 0; i<anzahl; i++)
+            {
+                lvItem = listView1.Items[0];
+                listView1.Items.RemoveAt(0);
+                listView2.Items.Add(lvItem);
+            }
+        }
+
+        private void btnAlleLinks_Click(object sender, EventArgs e)
+        {
+            int anzahl = listView2.Items.Count;
+            for (int i = 0; i < anzahl; i++)
+            {
+                lvItem = listView2.Items[0];
+                listView2.Items.RemoveAt(0);
+                listView1.Items.Add(lvItem);
+            }
         }
     }
 }
