@@ -55,11 +55,11 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader4});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
@@ -102,11 +102,11 @@
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader10,
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
+            this.columnHeader9});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(676, 12);
             this.listView2.Name = "listView2";
@@ -224,6 +224,7 @@
             this.btnLV2Clear.TabIndex = 7;
             this.btnLV2Clear.Text = "CLR";
             this.btnLV2Clear.UseVisualStyleBackColor = true;
+            this.btnLV2Clear.Click += new System.EventHandler(this.btnLV2Clear_Click);
             // 
             // btnInDBSpeichern
             // 
@@ -233,6 +234,7 @@
             this.btnInDBSpeichern.TabIndex = 5;
             this.btnInDBSpeichern.Text = "in DB speichern";
             this.btnInDBSpeichern.UseVisualStyleBackColor = true;
+            this.btnInDBSpeichern.Click += new System.EventHandler(this.btnInDBSpeichern_Click);
             // 
             // btnDBeinlesen
             // 
@@ -242,6 +244,7 @@
             this.btnDBeinlesen.TabIndex = 6;
             this.btnDBeinlesen.Text = "DB einlesen";
             this.btnDBeinlesen.UseVisualStyleBackColor = true;
+            this.btnDBeinlesen.Click += new System.EventHandler(this.btnDBeinlesen_Click);
             // 
             // Form1
             // 
