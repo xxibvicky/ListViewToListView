@@ -22,9 +22,9 @@ namespace ListViewToListView
             {
                 verbindung.Open();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception("Verbindung konnte nicht geöffnet werden!");
+                throw new Exception("Verbindung konnte nicht geöffnet werden! \n" + ex.Message);
             }
             
         }
@@ -33,6 +33,8 @@ namespace ListViewToListView
         {
             try
             {
+                verbindung.Close();
+                verbindung.Open();
                 cmd = new MySqlCommand(sql, verbindung);
                 return cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
             }
@@ -46,12 +48,46 @@ namespace ListViewToListView
         {
             try
             {
+                verbindung.Close();
+                verbindung.Open();
                 cmd = new MySqlCommand(sql, verbindung);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
                 throw new Exception("Fehler beim Ausführen:\n" + ex.Message);
+            }
+        }
+
+        public Int32 BerechnenInt(string sql)
+        {
+            try
+            {
+                verbindung.Close();
+                verbindung.Open();
+                cmd = new MySqlCommand(sql, verbindung);
+                Int32 x = Convert.ToInt32(cmd.ExecuteScalar());
+                return x;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Fehler beim Berechnen mit Int:\n" + ex.Message);
+            }
+        }
+
+        public double BerechnenDouble(string sql)
+        {
+            try
+            {
+                verbindung.Close();
+                verbindung.Open();
+                cmd = new MySqlCommand(sql, verbindung);
+                double x = Convert.ToDouble(cmd.ExecuteScalar());
+                return x;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Fehler beim Berechnen mit Double:\n" + ex.Message);
             }
         }
     }

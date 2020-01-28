@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnEinsRechts = new System.Windows.Forms.Button();
             this.btnEinsLinks = new System.Windows.Forms.Button();
             this.btnAlleRechts = new System.Windows.Forms.Button();
@@ -69,35 +69,30 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Kennzeichen";
+            this.columnHeader5.Width = 120;
+            // 
             // columnHeader1
             // 
-            this.columnHeader1.DisplayIndex = 1;
             this.columnHeader1.Text = "Marke";
             this.columnHeader1.Width = 100;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.DisplayIndex = 2;
             this.columnHeader2.Text = "Type";
             this.columnHeader2.Width = 100;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.DisplayIndex = 3;
             this.columnHeader3.Text = "Farbe";
             this.columnHeader3.Width = 80;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.DisplayIndex = 4;
             this.columnHeader4.Text = "PS";
             this.columnHeader4.Width = 80;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.DisplayIndex = 0;
-            this.columnHeader5.Text = "Kennzeichen";
-            this.columnHeader5.Width = 120;
             // 
             // listView2
             // 
@@ -116,35 +111,30 @@
             this.listView2.View = System.Windows.Forms.View.Details;
             this.listView2.DoubleClick += new System.EventHandler(this.listView2_DoubleClick);
             // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Kennzeichen";
+            this.columnHeader10.Width = 120;
+            // 
             // columnHeader6
             // 
-            this.columnHeader6.DisplayIndex = 1;
             this.columnHeader6.Text = "Marke";
             this.columnHeader6.Width = 100;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.DisplayIndex = 2;
             this.columnHeader7.Text = "Type";
             this.columnHeader7.Width = 100;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.DisplayIndex = 3;
             this.columnHeader8.Text = "Farbe";
             this.columnHeader8.Width = 80;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.DisplayIndex = 4;
             this.columnHeader9.Text = "PS";
             this.columnHeader9.Width = 80;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.DisplayIndex = 0;
-            this.columnHeader10.Text = "Kennzeichen";
-            this.columnHeader10.Width = 120;
             // 
             // btnEinsRechts
             // 

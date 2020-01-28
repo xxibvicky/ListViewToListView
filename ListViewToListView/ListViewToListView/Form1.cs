@@ -11,6 +11,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Data;
 using System.Data.OleDb;
+using MySql.Data.MySqlClient;
 
 namespace ListViewToListView
 {
@@ -24,14 +25,17 @@ namespace ListViewToListView
         internal List<Auto> autos;
         internal ListViewItem lvItem;
         XmlSerializer serializer;
-        Datenbank db;
-        OleDbDataReader dr;
+        //Datenbank db;
+        DatenbankSql db;
+        //OleDbDataReader dr;
+        MySqlDataReader dr;
         string sql;
         
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            db = new Datenbank();
+            //db = new Datenbank();
+            db = new DatenbankSql();
 
             listView1.FullRowSelect = true;
             listView2.FullRowSelect = true;
@@ -204,6 +208,10 @@ namespace ListViewToListView
                 lvItem.SubItems.Add(dr[4].ToString());
                 listView2.Items.Add(lvItem);
             }
+            int ps = db.BerechnenInt("SELECT sum(PS) from Auto;");
+            double wert = db.BerechnenDouble("SELECT sum(Wert) from Auto;");
+            MessageBox.Show("gesamt PS: " + ps);
+            MessageBox.Show("Gesamtwert: " + wert);
         }
 
         private void btnLV2Clear_Click(object sender, EventArgs e)
@@ -213,14 +221,15 @@ namespace ListViewToListView
 
         private void btnInDBSpeichern_Click(object sender, EventArgs e)
         {
-            sql = "delete * from Auto;";
+            //sql = "delete * from Auto;";
+            sql = "delete from auto";
 
-            MessageBox.Show(sql);
+            //MessageBox.Show(sql);
             db.Ausfuehren(sql);
 
             for(int i = 0; i<listView2.Items.Count; i++)
             {
-                lvItem = listView2.Items[1];
+                lvItem = listView2.Items[i];
                 string kz = lvItem.SubItems[0].Text;
                 string marke = lvItem.SubItems[1].Text;
                 string type = lvItem.SubItems[2].Text;
